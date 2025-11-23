@@ -38,7 +38,7 @@ Clone o repositório e instale as dependências:
 
 ```bash
 # Clone este repositório
-git clone [https://github.com/SEU-USUARIO/FeciTEL.git](https://github.com/SEU-USUARIO/FeciTEL.git)
+git clone https://github.com/ViniciusDev3/FeciTel.git
 
 # Entre na pasta
 cd FeciTEL
