@@ -1,0 +1,117 @@
+<!-- Enzo, Marcelo e Vinícius -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeciTEL - Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="00_style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a href="01_index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="uploads/logo.png" alt="Logo" class="navbar-logo">
+                </a>
+
+            <button class="btn-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenuFecitel">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end offcanvas-fecitel" tabindex="-1" id="sideMenuFecitel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu FeciTEL</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <div class="list-group list-group-flush">
+          <a href="01_index.html" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Início</a>
+          <a href="03_agenda.html" class="list-group-item list-group-item-action"><i class="bi bi-calendar2-week-fill"></i> Agenda e Palestras</a>
+          <a href="04_submissao.html" class="list-group-item list-group-item-action"><i class="bi bi-file-earmark-arrow-up-fill"></i> Submissão de Projetos</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="carouselFecitel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselFecitel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselFecitel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselFecitel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="uploads/fecitel.png" class="d-block w-100" alt="Banner FeciTEL 1" 
+                    style="height: 400px; object-fit: cover; object-position: center;">
+            </div>
+            <div class="carousel-item">
+                <img src="uploads/fecitel.png" class="d-block w-100" alt="Banner FeciTEL 2" 
+                    style="height: 400px; object-fit: cover; object-position: center;">
+            </div>
+            <div class="carousel-item">
+                <img src="uploads/fecitel.png" class="d-block w-100" alt="Banner FeciTEL 3" 
+                    style="height: 400px; object-fit: cover; object-position: center;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFecitel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFecitel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <div class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center d-grid gap-3">
+                
+                <a href="04_submissao.html" class="btn btn-blue-custom btn-rounded btn-lg">
+                    Submissão de trabalho
+                </a>
+                
+                <a href="03_agenda.html" class="btn btn-teal-custom btn-rounded btn-lg">
+                    Palestrantes e Oficinas
+                </a>
+
+                <h4 class="mt-4 text-muted fw-bold">INFORMAÇÃO</h4>
+                
+                <div class="card border-0 shadow-sm p-4 text-start text-muted" style="border-radius: 15px;">
+                    <p class="mb-0">
+                        Bem-vindo à Feira de Ciências e Tecnologia de Três Lagoas. 
+                        Aqui você encontra toda a programação e submissão de projetos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer text-center text-lg-start">
+        <div class="container pb-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5 class="text-uppercase fw-bold">FeciTEL</h5>
+                    <p class="small">Inovação e tecnologia no IFMS campus Três Lagoas.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-uppercase fw-bold">Contato</h6>
+                    <ul class="list-unstyled">
+                        <li>fecitel@ifms.edu.br</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+            © 2025 IFMS - Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

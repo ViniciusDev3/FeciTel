@@ -1,0 +1,120 @@
+<!-- Enzo, Marcelo e Vinícius -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeciTEL - Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="00_style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a href="01_index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="uploads/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+            <button class="btn-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenuFecitel">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end offcanvas-fecitel" tabindex="-1" id="sideMenuFecitel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu FeciTEL</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <div class="list-group list-group-flush">
+          <a href="01_index.html" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Início</a>
+          <a href="03_agenda.html" class="list-group-item list-group-item-action active_page_highlight"><i class="bi bi-calendar2-week-fill"></i> Agenda e Palestras</a>
+          <a href="04_submissao.html" class="list-group-item list-group-item-action"><i class="bi bi-file-earmark-arrow-up-fill"></i> Submissão de Projetos</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARROSSEL COM ALTURA FIXA DE 400PX -->
+    <div id="carouselFecitel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselFecitel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselFecitel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselFecitel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="uploads/fecitel.png" class="d-block w-100" alt="Banner FeciTEL 1" 
+                    style="height: 400px; object-fit: cover; object-position: center;">
+            </div>
+            <div class="carousel-item">
+                <img src="uploads/fecitel.png" class="d-block w-100" alt="Banner FeciTEL 2" 
+                    style="height: 400px; object-fit: cover; object-position: center;">
+            </div>
+            <div class="carousel-item">
+                <img src="uploads/fecitel.png" class="d-block w-100" alt="Banner FeciTEL 3" 
+                    style="height: 400px; object-fit: cover; object-position: center;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFecitel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFecitel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <div class="container my-5 flex-grow-1">
+        <h2 class="text-center mb-4" style="color: var(--fecitel-blue);">Projetos e Palestras</h2>
+        <p class="text-center text-muted mb-4">Clique nos cartões para ver mais detalhes.</p>
+        
+        <div class="row g-4" id="projects-container">
+            </div>
+    </div>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 15px; overflow: hidden;">
+          <div class="modal-header bg-primary-custom text-white" style="background-color: var(--fecitel-blue);">
+            <h5 class="modal-title fw-bold" id="modal-title">Título do Projeto</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="" id="modal-img" alt="Imagem do Projeto">
+            
+            <h6 class="fw-bold" style="color: var(--fecitel-blue);">Descrição:</h6>
+            <p id="modal-desc" class="text-muted">Descrição detalhada aqui...</p>
+            
+            <hr>
+            
+            <div class="d-flex justify-content-between">
+                <div>
+                    <small class="fw-bold d-block">Data/Horário</small>
+                    <span id="modal-date" class="badge" style="background-color: var(--fecitel-teal);">00/00</span>
+                </div>
+                <div class="text-end">
+                    <small class="fw-bold d-block">Responsáveis</small>
+                    <span id="modal-students" class="text-dark">Nome dos Alunos</span>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary btn-rounded btn-sm" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="main-footer text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+            © 2025 IFMS - Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

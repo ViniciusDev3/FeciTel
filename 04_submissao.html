@@ -1,0 +1,115 @@
+<!-- Enzo, Marcelo e Vinícius -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeciTEL - Submissão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="00_style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a href="01_index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="uploads/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+            <button class="btn-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenuFecitel">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end offcanvas-fecitel" tabindex="-1" id="sideMenuFecitel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu FeciTEL</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <div class="list-group list-group-flush">
+          <a href="01_index.html" class="list-group-item list-group-item-action"><i class="bi bi-house-door-fill"></i> Início</a>
+          <a href="03_agenda.html" class="list-group-item list-group-item-action"><i class="bi bi-calendar2-week-fill"></i> Agenda e Palestras</a>
+          <a href="04_submissao.html" class="list-group-item list-group-item-action"><i class="bi bi-file-earmark-arrow-up-fill"></i> Submissão de Projetos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card border-0 shadow p-4" style="border-radius: 20px;">
+                    <h3 class="text-center mb-4" style="color: var(--fecitel-blue);">Submeter Projeto</h3>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nome completo" required>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Série / Ano" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Escola" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-mail para contato" required>
+                        </div>
+                        
+                        <hr class="my-4">
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control fw-bold" placeholder="Título do Projeto" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Área Temática" required>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col">
+                                <label class="form-label text-muted fw-bold ms-1">Data da Apresentação</label>
+                                <input type="date" class="form-control" id="project-date" required>
+                            </div>
+                            <div class="col">
+                                <label class="form-label text-muted fw-bold ms-1">Hora da Apresentação</label>
+                                <input type="time" class="form-control" id="project-time" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Resumo do projeto..." required></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label text-muted fw-bold ms-1">Foto do Projeto</label>
+                            
+                            <div class="btn-upload-custom" id="upload-trigger">
+                                <div id="upload-content">
+                                    <i class="bi bi-camera-fill"></i>
+                                    <span>Adicionar Foto</span>
+                                </div>
+                                <img id="preview-img" src="" style="display:none;">
+                            </div>
+
+                            <input type="file" id="project-photo" accept="image/*" style="display: none;">
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-teal-custom btn-rounded py-3">ENVIAR PROJETO</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+            © 2025 IFMS - Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
